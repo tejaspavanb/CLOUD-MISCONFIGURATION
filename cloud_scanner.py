@@ -106,6 +106,7 @@ class CloudScanner:
         except Exception as e:
             self.logger.error(f"Error scanning EC2 instances: {str(e)}")
 
+        self.logger.info(f"EC2 findings: {findings}")
         return findings
 
     def scan_s3_buckets(self) -> List[Finding]:
@@ -138,6 +139,7 @@ class CloudScanner:
         except Exception as e:
             self.logger.error(f"Error scanning S3 buckets: {str(e)}")
 
+        self.logger.info(f"S3 findings: {findings}")
         return findings
 
     def scan_iam_users(self) -> List[Finding]:
@@ -169,6 +171,7 @@ class CloudScanner:
         except Exception as e:
             self.logger.error(f"Error scanning IAM users: {str(e)}")
 
+        self.logger.info(f"IAM findings: {findings}")
         return findings
 
     def scan_rds_instances(self) -> List[Finding]:
@@ -199,6 +202,7 @@ class CloudScanner:
         except Exception as e:
             self.logger.error(f"Error scanning RDS instances: {str(e)}")
 
+        self.logger.info(f"RDS findings: {findings}")
         return findings
 
     def export_findings_csv(self, filename: str):
