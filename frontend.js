@@ -74,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(data => {
                 console.log('Scan results data received:', data);
                 resultsContainer.innerHTML = '';
+                resultsContainer.setAttribute('data-scan-id', scanId);
                 data.findings.forEach(finding => {
                     const findingElement = document.createElement('div');
                     findingElement.classList.add('finding');
