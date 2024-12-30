@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Scanner Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Cloud Scanner Dashboard</h1>
+    </header>
+    <main>
+        <button id="scanButton">Start Scan</button>
+        <div id="resultsContainer"></div>
+        <div>
+            <label>
+                <input type="radio" name="exportFormat" value="csv" checked> CSV
+            </label>
+            <label>
+                <input type="radio" name="exportFormat" value="pdf"> PDF
+            </label>
+            <button id="exportButton">Export Results</button>
+        </div>
+    </main>
+    <script src="frontend.js"></script>
+</body>
+</html>
